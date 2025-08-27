@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOX FEED AI Chatbot</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .back-btn {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 5px 10px;
+      border: 1px solid white;
+      border-radius: 5px;
+    }
+
+    .ai-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .ai-container h3 {
+      margin-top: 0;
+    }
+
+    /* Chat input */
+    .chat-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    /* Placeholder chat messages */
+    .chat-box {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      height: 300px;
+      overflow-y: auto;
+      background: #fafafa;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      margin: 5px 0;
+    }
+
+    .message.user {
+      text-align: right;
+      color: #007bff;
+    }
+
+    .message.bot {
+      text-align: left;
+      color: #333;
+    }
+
+    button.send-btn {
+      padding: 10px 15px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button.send-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn">⬅ Home</a>
+    <h2>FOX AI</h2>
+    <div></div>
+  </header>
+
+  <div class="ai-container">
+    <h3>Chat with our AI</h3>
+    <div class="chat-box" id="chatBox">
+      <div class="message bot">Hello! I'm your AI assistant. Ask me anything!</div>
+    </div>
+    <input type="text" id="userInput" class="chat-input" placeholder="Type your message here...">
+    <button class="send-btn" onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    const chatBox = document.getElementById('chatBox');
+    const userInput = document.getElementById('userInput');
+
+    function sendMessage() {
+      const text = userInput.value.trim();
+      if(!text) return;
+
+      // Add user message
+      const userMsg = document.createElement('div');
+      userMsg.classList.add('message', 'user');
+      userMsg.innerText = text;
+      chatBox.appendChild(userMsg);
+
+      userInput.value = '';
+      chatBox.scrollTop = chatBox.scrollHeight;
+
+      // Simulate bot response
+      const botMsg = document.createElement('div');
+      botMsg.classList.add('message', 'bot');
+      botMsg.innerText = "This is a placeholder response. AI integration coming soon!";
+      chatBox.appendChild(botMsg);
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }
+
+    userInput.addEventListener('keypress', function(e){
+      if(e.key === 'Enter') sendMessage();
+    });
+  </script>
+
+</body>
+</html>

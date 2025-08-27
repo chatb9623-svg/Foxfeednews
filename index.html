@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="64e5f14ee2f0ac72">
+  <title>FOX FEED NEWS – Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #333;
+      color: white;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 200;
+    }
+    .sidebar a {
+      display: block;
+      padding: 12px 25px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      transition: 0.2s;
+    }
+    .sidebar a:hover {
+      background: #444;
+    }
+    .sidebar .active {
+      background: #007bff;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 150;
+      transition: 0.3s;
+    }
+
+    /* Article styles */
+    article img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    article h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    article p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Ad space */
+    .ad-space {
+      margin: 20px 0;
+      padding: 10px;
+      background: #f9f9f9;
+      border: 1px dashed #ccc;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      border-radius: 5px;
+    }
+    .top-ad {
+      margin: 10px auto;
+      padding: 8px;
+      background: #f1f1f1;
+      border: 1px dashed #bbb;
+      text-align: center;
+      font-size: 13px;
+      max-width: 900px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header style="background:#222; color:white; padding:15px; display:flex; align-items:center; justify-content:space-between;">
+    <div id="menuBtn" style="cursor:pointer; font-size:22px;">⋮</div>
+    <h2 style="margin:0; font-size:24px;">FOX FEED NEWS</h2>
+    <a href="ai-chatbot.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="AI Logo" style="width:40px; height:40px; cursor:pointer;">
+    </a>
+  </header>
+
+  <!-- Top Ad Bar -->
+  <div class="top-ad">[Top Ad Space]</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="index.html" class="active">🏠 Home</a>
+    <a href="news.html">📰 News</a>
+    <a href="about.html">ℹ️ About</a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Search Bar -->
+  <div style="padding:15px; background:#f5f5f5; display:flex; align-items:center; gap:10px;">
+    <input id="searchInput" type="text" placeholder="Search articles..."
+           style="flex:1; padding:10px; font-size:16px; border:1px solid #ccc; border-radius:5px;">
+    <span style="font-size:20px; cursor:pointer;">🔍</span>
+  </div>
+
+  <!-- Articles -->
+  <main id="articles" style="padding:20px; max-width:900px; margin:auto; background:white;">
+
+    <!-- Article 1 -->
+    <article>
+      <img src="https://i.postimg.cc/pdXZncWn/download-9.jpg" alt="Ukraine-Russia energy hits">
+      <h3>Oil prices climb after Ukraine drone attacks hit Russian energy sites</h3>
+      <p>Ukrainian drone strikes disrupted major export terminals and a refinery, boosting global oil prices.</p>
+    </article>
+
+    <!-- Article 2 -->
+    <article>
+      <img src="https://i.postimg.cc/cHPM2sQQ/37a0f2b0-81d4-11f0-a34f-318be3fb0481.jpg" alt="Trump North Korea call">
+      <h3>Trump floats another summit with Kim Jong Un amid South Korea diplomacy</h3>
+      <p>Trump backed a new summit with Kim while meeting South Korea's president, signaling bold diplomacy moves.</p>
+    </article>
+
+    <!-- Article 3 -->
+    <article>
+      <img src="https://i.postimg.cc/15hrK3RS/download-11.jpg" alt="Notting Hill Carnival">
+      <h3>Notting Hill Carnival’s future uncertain despite last-minute funding boost</h3>
+      <p>Europe's largest street festival was saved from cancellation by a £1M bailout—but long-term support is lacking.</p>
+    </article>
+
+    <div class="ad-space">[Ad Space]</div>
+
+    <!-- Article 4 -->
+    <article>
+      <img src="https://i.postimg.cc/3x3jPfDb/download-12.jpg" alt="Trump tariff India">
+      <h3>Countdown begins: Trump may impose 25% tariff on India by August 27</h3>
+      <p>Markets await Trump’s next move—possible steep tariffs on Indian goods could upend trade relations.</p>
+    </article>
+
+    <!-- Article 5 -->
+    <article>
+      <img src="https://i.postimg.cc/4d0BGvTH/download-13.jpg" alt="Asia markets rally">
+      <h3>Asia stocks surge as Fed hints at rate cuts, markets show investor optimism</h3>
+      <p>Chinese blue chips and regional markets climbed on dovish Fed signals ahead of key tech earnings.</p>
+    </article>
+
+    <!-- Article 6 -->
+    <article>
+      <img src="https://i.postimg.cc/MGMYDMBW/download-14.jpg" alt="Top photos day">
+      <h3>AP releases “Top Photos of the Day” capturing global events</h3>
+      <p>A striking visual roundup of the day’s most compelling scenes around the world, curated by AP editors.</p>
+    </article>
+    
+    <div class="ad-space">[Ad Space]</div>
+
+    <!-- Article 7 -->
+    <article>
+      <img src="https://i.postimg.cc/FR0gMMG8/download-15.jpg" alt="Powell dovish pivot">
+      <h3>Powell’s dovish pivot rattles markets amid policy shift chatter</h3>
+      <p>A tone shift in Fed policy guidance spurred volatility—but softened the outlook for rate cuts ahead.</p>
+    </article>
+
+    <!-- Article 8 -->
+    <article>
+      <img src="https://i.postimg.cc/qM1XHXXJ/download-17.jpg" alt="Intel stake">
+      <h3>Federal government buys 10% stake in Intel; Keurig Dr Pepper inks $18B deal</h3>
+      <p>Big corporate moves mark the morning as Washington backs Intel and a major beverage merger unfolds.</p>
+    </article>
+
+    <!-- Article 9 -->
+    <article>
+      <img src="https://i.postimg.cc/jj7zNVV2/images-4.jpg" alt="Guard to Chicago">
+      <h3>Trump deploys National Guard to Chicago amid political backlash</h3>
+      <p>Critics accused Trump of manufacturing unrest to justify the move—deep political fallout followed.</p>
+    </article>
+    
+    <div class="ad-space">[Ad Space]</div>
+
+    <!-- Article 10 -->
+    <article>
+      <img src="https://i.postimg.cc/Hsn8XGXm/download-16.jpg" alt="India floods advisory">
+      <h3>India issues flood advisory to Pakistan—their first contact since conflict</h3>
+      <p>A rare diplomatic signal, as India warns Pakistan of flood risks amid strained relations.</p>
+    </article>
+
+    <!-- Article 11 -->
+    <article>
+      <img src="https://i.postimg.cc/SxzX1Wgt/download-18.jpg" alt="Isle of Wight crash">
+      <h3>Helicopter crash kills three on the Isle of Wight during holiday weekend</h3>
+      <p>A tragic crash occurred amid bank holiday travel chaos, raising safety questions.</p>
+    </article>
+
+    <!-- Article 12 -->
+    <article>
+      <img src="https://i.postimg.cc/vmr4bGFr/download-19.jpg" alt="Gaza famine">
+      <h3>Famine officially confirmed in Gaza City, raising humanitarian alarms</h3>
+      <p>UN-backed report upgrades Gaza’s crisis to Phase 5—meaning widespread starvation is underway.</p>
+    </article>
+    
+    <div class="ad-space">[Ad Space]</div>
+
+    <!-- Article 13 -->
+    <article>
+      <img src="https://i.postimg.cc/HnhxBxXg/download-20.jpg" alt="Intel chips funding">
+      <h3>US takes 10% equity in Intel under CHIPS Act revitalization plan</h3>
+      <p>The CHIPS Act sees bold investment in semiconductors, spurring long-term tech infrastructure hopes.</p>
+    </article>
+
+    <!-- Article 14 -->
+    <article>
+      <img src="https://i.postimg.cc/d1QVFd9F/download-21.jpg" alt="Dinosaur named">
+      <h3>Dinosaur species named after Dame Ellen MacArthur discovered on Isle of Wight</h3>
+      <p>A prehistoric species gets a modern honour, paying tribute to the legendary sailor-turned-explorer.</p>
+    </article>
+
+    <!-- Article 15 -->
+    <article>
+      <img src="https://i.postimg.cc/0ypkJZWx/download-22.jpg" alt="116th birthday">
+      <h3>Ethel Caterham turns 116—Britain's oldest living person</h3>
+      <p>She makes history today, becoming the oldest ever recorded person in UK history. Legend status unlocked.</p>
+    </article>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.style.width = "250px";
+      overlay.style.width = "100%";
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.style.width = "0";
+      overlay.style.width = "0";
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const articles = document.querySelectorAll("article");
+
+    searchInput.addEventListener("keyup", function() {
+      const filter = searchInput.value.toLowerCase();
+      articles.forEach(article => {
+        const text = article.innerText.toLowerCase();
+        article.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
+</body>
+</html>
